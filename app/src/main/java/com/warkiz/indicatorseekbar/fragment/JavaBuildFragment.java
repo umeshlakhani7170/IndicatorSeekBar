@@ -3,11 +3,12 @@ package com.warkiz.indicatorseekbar.fragment;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.support.annotation.NonNull;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
 
 import com.warkiz.indicatorseekbar.R;
 import com.warkiz.widget.IndicatorSeekBar;

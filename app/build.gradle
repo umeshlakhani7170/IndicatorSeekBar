@@ -1,15 +1,20 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion '27.0.3'
+    compileSdk COMPILE_SDK_VERSION as int
+    buildToolsVersion = COMPILE_BUILD_TOOLS_VERSION as String
+    namespace 'com.warkiz.indicatorseekbar'
     defaultConfig {
         applicationId "com.warkiz.indicatorseekbar"
-        minSdkVersion 24
-        targetSdkVersion 27
+        minSdk MIN_SDK_VERSION as int
+        targetSdk TARGET_SDK_VERSION as int
         versionCode 3
         versionName "2.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
     }
     buildTypes {
         release {
@@ -21,6 +26,7 @@ android {
 
 dependencies {
     implementation project(':indicatorseekbar')
-    implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.android.support:design:27.1.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.annotation:annotation:1.9.1'
+    implementation 'com.google.android.material:material:1.12.0'
 }
